@@ -1,12 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NVDE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NVDE | Fashion • Jewellery • Perfume • Lifestyle</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #111;
+  align-items: center;
+}
+
+nav h1 {
+  color: gold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+              url('https://images.unsplash.com/photo-1521334884684-d80222895322');
+  background-size: cover;
+}
+
+.hero h2 {
+  font-size: 50px;
+  color: gold;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 15px;
+  padding: 20px;
+  width: 220px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 1px solid gold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>NVDE Website Live 🚀</h1>
-<p>Fashion | Jewellery | Perfume | Lifestyle</p>
+<!-- NAVBAR -->
+<nav>
+  <h1>NVDE</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+  <h2>NVDE</h2>
+  <p>Bold • Elegant • Luxury Lifestyle Brand</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About NVDE</h2>
+  <p>
+    NVDE is a multi-vertical lifestyle brand offering fashion, jewellery, perfumes,
+    accessories and modern lifestyle essentials designed for confidence and elegance.
+  </p>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section" id="products">
+  <h2>Our Categories</h2>
+
+  <div class="cards">
+    <div class="card">Fashion</div>
+    <div class="card">Jewellery</div>
+    <div class="card">Perfumes</div>
+    <div class="card">Accessories</div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: contact@nvde.com</p>
+  <p>Instagram: @nvde</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 NVDE. All Rights Reserved.
+</footer>
 
 </body>
 </html>
