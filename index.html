@@ -4,28 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NVDE | Fashion • Jewellery • Perfume • Lifestyle</title>
+<title>NVDE | Bold Luxury Lifestyle Brand</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0d0d0d;
-  color: #fff;
+  background: #0b0b0b;
+  color: white;
 }
 
-/* NAVBAR */
-nav {
+/* TOP BAR */
+header {
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
   background: #111;
-  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
-nav h1 {
+.logo {
   color: gold;
-  letter-spacing: 2px;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 nav a {
@@ -38,63 +41,74 @@ nav a:hover {
   color: gold;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-              url('https://images.unsplash.com/photo-1521334884684-d80222895322');
-  background-size: cover;
+  background: radial-gradient(circle, #1a1a1a, #000);
 }
 
-.hero h2 {
-  font-size: 50px;
+.hero h1 {
+  font-size: 60px;
   color: gold;
+  margin: 0;
 }
 
 .hero p {
   font-size: 18px;
-  color: #ddd;
+  color: #ccc;
+  max-width: 600px;
 }
 
-/* SECTIONS */
+/* CATEGORY SECTIONS */
 .section {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 40px;
 }
 
 .section h2 {
   color: gold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-/* CARDS */
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background: #1a1a1a;
-  margin: 15px;
-  padding: 20px;
-  width: 220px;
-  border-radius: 10px;
+  background: #151515;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
   transition: 0.3s;
+  border: 1px solid #222;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  border: 1px solid gold;
+  transform: translateY(-8px);
+  border-color: gold;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(90deg, #000, #1a1a1a);
+  text-align: center;
+  padding: 60px 20px;
+  color: #aaa;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background: #111;
-  color: #aaa;
+  color: #777;
 }
 </style>
 
@@ -102,52 +116,74 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h1>NVDE</h1>
-  <div>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
+<header>
+  <div class="logo">NVDE</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#fashion">Fashion</a>
+    <a href="#jewellery">Jewellery</a>
+    <a href="#perfume">Perfume</a>
     <a href="#contact">Contact</a>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<!-- HERO SECTION -->
-<div class="hero">
-  <h2>NVDE</h2>
-  <p>Bold • Elegant • Luxury Lifestyle Brand</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section" id="about">
-  <h2>About NVDE</h2>
+<!-- HERO -->
+<section class="hero" id="home">
+  <h1>NVDE</h1>
   <p>
-    NVDE is a multi-vertical lifestyle brand offering fashion, jewellery, perfumes,
-    accessories and modern lifestyle essentials designed for confidence and elegance.
+    Bold. Elegant. Unapologetic.  
+    A multi-vertical luxury lifestyle brand redefining fashion, beauty and identity.
   </p>
-</div>
+</section>
 
-<!-- PRODUCTS -->
-<div class="section" id="products">
-  <h2>Our Categories</h2>
-
-  <div class="cards">
-    <div class="card">Fashion</div>
-    <div class="card">Jewellery</div>
-    <div class="card">Perfumes</div>
-    <div class="card">Accessories</div>
+<!-- FASHION -->
+<section class="section" id="fashion">
+  <h2>Fashion</h2>
+  <div class="grid">
+    <div class="card">Street Luxury Wear</div>
+    <div class="card">Premium Outfits</div>
+    <div class="card">Urban Collection</div>
+    <div class="card">Limited Edition</div>
   </div>
+</section>
+
+<!-- JEWELLERY -->
+<section class="section" id="jewellery">
+  <h2>Jewellery</h2>
+  <div class="grid">
+    <div class="card">Gold Collection</div>
+    <div class="card">Modern Minimal</div>
+    <div class="card">Luxury Stones</div>
+    <div class="card">Signature Pieces</div>
+  </div>
+</section>
+
+<!-- PERFUME -->
+<section class="section" id="perfume">
+  <h2>Perfume</h2>
+  <div class="grid">
+    <div class="card">Dark Essence</div>
+    <div class="card">Floral Mist</div>
+    <div class="card">Royal Oud</div>
+    <div class="card">Signature NVDE</div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<div class="banner">
+  “Style is not fashion, it is identity. NVDE defines yours.”
 </div>
 
 <!-- CONTACT -->
-<div class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: contact@nvde.com</p>
-  <p>Instagram: @nvde</p>
-</div>
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div class="card">Instagram: @nvde</div>
+    <div class="card">Email: contact@nvde.com</div>
+    <div class="card">WhatsApp: +91 XXXXX</div>
+  </div>
+</section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 NVDE. All Rights Reserved.
 </footer>
